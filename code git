@@ -1,0 +1,225 @@
+
+kraha@LAPTOP-MI312ADV MINGW64 /
+$ pwd
+/
+
+kraha@LAPTOP-MI312ADV MINGW64 /
+$ cd Users\kraha\OneDrive\Documents
+bash: cd: UserskrahaOneDriveDocuments: No such file or directory
+
+kraha@LAPTOP-MI312ADV MINGW64 /
+$ cd Users
+bash: cd: Users: No such file or directory
+
+kraha@LAPTOP-MI312ADV MINGW64 /
+$ cd "C:\Users\kraha\OneDrive\Documents"
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents (master)
+$ pwd
+/c/Users/kraha/OneDrive/Documents
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents (master)
+$ mkdir github
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents (master)
+$ touch texte.txt
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents (master)
+$ cd github
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ touch texte.txt
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git init
+Initialized empty Git repository in C:/Users/kraha/OneDrive/Documents/github/.git/
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git config --global user.name "DAMTY570"
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git config --global user.email krahabraham570@gmail.com
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ code.
+bash: code.: command not found
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ code .
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ code .
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git add .
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   texte.txt
+
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git commit
+hint: Waiting for your editor to close the file... error: cannot spawn notepad++: No such file or directory
+error: unable to start editor 'notepad++'
+Please supply the message using either -m or -F option.
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git commit -m
+error: switch `m' requires a value
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git commit -m première version du cours
+error: pathspec 'version' did not match any file(s) known to git
+error: pathspec 'du' did not match any file(s) known to git
+error: pathspec 'cours' did not match any file(s) known to git
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git commit -m "première version du cours"
+[master (root-commit) 70d8e25] première version du cours
+ 2 files changed, 13 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 texte.txt
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git log
+commit 70d8e25b22abdc48dcda05aeaa85635e31406c32 (HEAD -> master)
+Author: DAMTY570 <krahabraham570@gmail.com>
+Date:   Tue Oct 17 10:14:56 2023 +0200
+
+    première version du cours
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git add .
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git commit -m "seconde version"
+[master 082faf5] seconde version
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git log
+commit 082faf58387fda6e9621332e68a9978fdb4858e3 (HEAD -> master)
+Author: DAMTY570 <krahabraham570@gmail.com>
+Date:   Tue Oct 17 11:08:28 2023 +0200
+
+    seconde version
+
+commit 70d8e25b22abdc48dcda05aeaa85635e31406c32
+Author: DAMTY570 <krahabraham570@gmail.com>
+Date:   Tue Oct 17 10:14:56 2023 +0200
+
+    première version du cours
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git log -n2
+commit 082faf58387fda6e9621332e68a9978fdb4858e3 (HEAD -> master)
+Author: DAMTY570 <krahabraham570@gmail.com>
+Date:   Tue Oct 17 11:08:28 2023 +0200
+
+    seconde version
+
+commit 70d8e25b22abdc48dcda05aeaa85635e31406c32
+Author: DAMTY570 <krahabraham570@gmail.com>
+Date:   Tue Oct 17 10:14:56 2023 +0200
+
+    première version du cours
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+
+$ git show 082faf58387fda6e9621332e68a9978fdb4858e3
+commit 082faf58387fda6e9621332e68a9978fdb4858e3 (HEAD -> master)
+Author: DAMTY570 <krahabraham570@gmail.com>
+Date:   Tue Oct 17 11:08:28 2023 +0200
+
+    seconde version
+
+diff --git a/index.html b/index.html
+index e418980..4ba9d91 100644
+--- a/index.html
++++ b/index.html
+@@ -7,7 +7,8 @@
+ </head>
+ <body>
+     <h1> cours github </h1>
+-    <h2> version 1 </h2>
+-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores unde molestias veritatis? Mollitia nam cum aspernatur soluta? Sit, dolores laudantium dolorem ex deleniti officiis excepturi dignissimos atque, repellendus, veniam ullam.</p>
++    <h2> version 2 </h2>
++    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquam quod, optio error repellat iste facilis voluptatem voluptas deleniti fugit vitae accusamus maiores aperiam. Nemo, officia. Totam soluta voluptatibus et commo
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git checkout ^C
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git checkout 70d8e25b22abdc48dcda05aeaa85635e31406c32
+Note: switching to '70d8e25b22abdc48dcda05aeaa85635e31406c32'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 70d8e25 première version du cours
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github ((70d8e25...))
+$ git checkout master
+Previous HEAD position was 70d8e25 première version du cours
+Switched to branch 'master'
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ git clone https://github.com/DAMTY570/github-online-.git
+Cloning into 'github-online-'...
+warning: You appear to have cloned an empty repository.
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ cd Documents
+bash: cd: Documents: No such file or directory
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ ^C
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ ^C
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents/github (master)
+$ cd "C:\Users\kraha\OneDrive\Documents"
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents (master)
+$ git clone https://github.com/DAMTY570/github-online-.git
+Cloning into 'github-online-'...
+warning: You appear to have cloned an empty repository.
+
+kraha@LAPTOP-MI312ADV MINGW64 ~/OneDrive/Documents (master)
+$
+
